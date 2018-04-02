@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  devise_for :users, controllers: { registrations: "registrations" }
   root to: 'pages#home'
 
-
-  resources :users, only: [:new, :create, :edit, :update, :show]
+  resources :users, only: [:edit, :update, :show]
 
   resources :consultations, only: [:index]
 
   resources :advisors, except: [:destroy] do
-  resources :consultations, only: [:new, :create] do
-    resources :reviews, only: [:new, :create]
+    resources :consultations, only: [:new, :create] do
+      resources :reviews, only: [:new, :create]
     end
   end
 
