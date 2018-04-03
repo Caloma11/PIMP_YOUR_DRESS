@@ -4,16 +4,21 @@
   <h1>Your consultations</h1>
   </div>
       <ul class="inbox">
+
+      <% @consultations.each do |consultation| %>
+
+
+
+
         <li class="message">
-          <img src="images/gab.png" alt="" class="avatar-large">
           <div class="message-name">
-            <h3>Gab Dehan</h3>
-            <p>10/07/17</p>
+            <h3><%= consultation.user.first_name%> <%=consultation.user.last_name %></h3>
+            <p><%= consultation.start_time %> <br>-<br> <%=  consultation.end_time%></p>
           </div>
           <div class="message-body">
             <p><strong>Not sure what to dress</strong></p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              <%=  consultation.description %>
             </p>
           </div>
           <div class="message-status">
@@ -21,6 +26,8 @@
             <p class="price">€345</p>
           </div>
         </li>
+
+        <% end %>
 
 
         <li class="message">
