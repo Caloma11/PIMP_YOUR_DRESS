@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
       consultations_path
       else
       advisors_path
-    end
+      end
     end
 
 
