@@ -1,0 +1,114 @@
+.message {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(220,224,244,0.4);
+}
+.message:last-child {
+  border-bottom: none;
+}
+.message-body {
+  flex-grow: 1;
+}
+.message-name {
+  padding-left: 10px;
+  min-width: 100px;
+}
+.message-name h3 {
+  font-size: 13px;
+  margin-bottom: 0px;
+}
+.message-name p {
+  font-size: 13px;
+  font-weight: lighter;
+  opacity: 0.6;
+  margin-top: 5px;
+}
+.message-body {
+  padding-left: 10px;
+  font-size: 13px;
+  color: rgba(0,0,0,0.7);
+}
+.message-body {
+  padding-left: 20px;
+  color: rgba(0,0,0,0.4);
+}
+.message-body strong{
+  color: rgba(0,0,0,0.9);
+  color: rgba(0,0,0,0.9);
+}
+.message-body p {
+  margin: 6px 0;
+}
+.message-status {
+  font-size: 14px;
+  font-weight: bold;
+}
+.status.accepted {
+  color: #04A366;
+}
+.status.declined {
+  color: red;
+}
+.status.pending {
+  color: lightgrey;
+}
+
+
+
+
+
+
+.advisor {
+  margin-top: 50px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+  background-color: rgba(255,255,255,0.9);
+  display: flex;
+  height: 80vh;
+  padding: 30px;
+  justify-content: space-around;
+
+  h1{
+    color: rgba(0,0,0,.6);
+    font-weight: lighter;
+  }
+
+
+  h3{
+    font-weight: lighter;
+    margin-bottom: 25px;
+  }
+
+  h4{
+    margin-top:25px;
+    text-transform: uppercase;
+    font-weight:lighter;
+  }
+
+  p {
+    line-height: 30px;
+  }
+
+  .btn {
+    margin-top:30px;
+
+  }
+
+}
+// .profile-image {
+//   background-color: yellow;
+//   background-position: 0px;
+//   background-size: cover;
+//   height: 73vh;
+//   width: 30vw;
+//   margin-right: 70px;
+// }
+
+// .profile-details {
+//   width: 35vw;
+// }
+
+.inbox {
+  overflow: auto;
+  // padding-left: 0px;
+}
