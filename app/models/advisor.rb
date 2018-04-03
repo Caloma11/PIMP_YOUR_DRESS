@@ -6,7 +6,6 @@ class Advisor < ApplicationRecord
 
   def self.cities
     Advisor.select(:city).uniq.pluck(:city).sort
-
   end
 
 end
