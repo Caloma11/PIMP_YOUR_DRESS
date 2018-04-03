@@ -2,6 +2,7 @@
   <%= u.input :bio %>
   <%= u.input :city %>
   <%= u.simple_fields_for :advisor do |a| %>
+    <%= a.input :title %>
     <%= a.input :rate %>
     <%= a.input :category %>
   <% end %>

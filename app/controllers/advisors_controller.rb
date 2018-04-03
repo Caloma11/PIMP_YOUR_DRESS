@@ -16,7 +16,7 @@ class AdvisorsController < ApplicationController
   end
 
   def create
-    @advisor = Advisor.new(advisor_params)
+    @advisor = Advisor.new(advisor_attributes)
 
   end
 
@@ -41,7 +41,7 @@ class AdvisorsController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:bio, :city, advisor_attributes: [:rate, :category])
+    params.require(:user).permit(:bio, :city, advisor_attributes: [:rate, :category, :title])
   end
 
 
