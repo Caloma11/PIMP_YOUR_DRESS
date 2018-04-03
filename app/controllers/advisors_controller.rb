@@ -11,7 +11,8 @@ class AdvisorsController < ApplicationController
   end
 
   def new
-    @advisor = Advisor.new
+
+    current_user.build_advisor
   end
 
   def create
@@ -23,8 +24,10 @@ class AdvisorsController < ApplicationController
   end
 
   def update
-    if @advisor.update(advisor_params)
-      redirect_to :show
+    byebug
+    current_user.build_advisor
+    if current_user.update(user_params)
+      redirect_to '/'
     else
       render :edit
     end
@@ -37,8 +40,8 @@ class AdvisorsController < ApplicationController
       @advisor = Advisor.find(params[:id])
   end
 
-  def advisor_params
-    params.require(:advisor).permit(:first_name, :last_name, :email, :bio, :city)
+  def user_params
+    params.require(:user).permit(:bio, :city, advisor_attributes: [:rate, :category])
   end
 
 
