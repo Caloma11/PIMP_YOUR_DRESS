@@ -4,4 +4,9 @@ class Advisor < ApplicationRecord
   validates :bio, presence: true
   validates :city, presence: true
 
+  def self.cities
+    Advisor.select(:city).uniq.pluck(:city).sort
+
+  end
+
 end

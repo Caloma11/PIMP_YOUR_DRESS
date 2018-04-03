@@ -4,7 +4,11 @@ class AdvisorsController < ApplicationController
 
 
   def index
-    @advisors = Advisor.all
+    if params[:city].present?
+      @advisors = Advisor.where(city: params[:city])
+    else
+      @advisors = Advisor.all
+    end
   end
 
   def show
