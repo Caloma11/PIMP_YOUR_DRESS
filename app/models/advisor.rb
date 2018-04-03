@@ -2,6 +2,7 @@ class Advisor < ApplicationRecord
   belongs_to :user
   has_many :consultations
 
+
   def city
     user.city
   end

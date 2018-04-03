@@ -1,15 +1,17 @@
 <%= simple_form_for(current_user) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :bio %>
-    <%= f.input :city %>
+    <div class="register">
+      <div class="form-inputs">
+        <%= f.input :bio, placeholder: 'Bio', label: false %>
+        <%= f.input :city, placeholder: 'City', label: false %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, class: "btn-success" %>
+        <div class="btn btn-default"><%= link_to "Not now", advisors_path %></div>
+    <% end %>
+
+
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-
-<% end %>
-
-<button type="button" class="btn btn-warning"><a href="">Not now</a></button>
