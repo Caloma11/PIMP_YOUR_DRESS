@@ -1,2 +1,39 @@
-<p>index</p>
+
+<h1>Hire a fashion expert</h1>
+
+<div class="filter-by-city">
+  <div class="show-all">
+    <%= form_tag advisors_path, method: :get do  %>
+      <%= select_tag "city", options_for_select(Advisor.cities), class: "filter-form" %>
+      <%= submit_tag "filter by city", class: "btn btn-success" %>
+    <% end %>
+  </div>
+  <div class="form-city">
+    <%= form_tag advisors_path, method: :get do  %>
+      <%= submit_tag "show all", class: "btn btn-success" %>
+      <% end %>
+  </div>
+  </div>
+</div>
+<br>
+
+
+
+<div class="container">
+  <div class="grid">
+    <% @advisors.each do |advisor| %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://res.cloudinary.com/dta0lx6co/image/upload/v1522768338/photo-1456885284447-7dd4bb8720bf.jpg');">
+
+        <div class="card-description">
+          <h3><%= advisor.user.first_name %><%= advisor.user.last_name %></h3>
+          <h4><%= advisor.title %></h4>
+          <p><%= advisor.city %></p>
+        </div>
+        <%= link_to "", advisor_path(advisor), class: "card-link" %>
+        <!-- <a class="card-link" href="<%#= advisor_path(advisor) %>" ></a> -->
+      </div>
+    <% end %>
+  </div>
+
+</div>
 
