@@ -12,6 +12,8 @@ class ConsultationsController < ApplicationController
   end
 
   def new
+    @advisor = Advisor.find(params[:advisor_id])
+    # @consultation.advisor_id = params[:advisor_id]
     @consultation = Consultation.new
   end
 
@@ -19,12 +21,17 @@ class ConsultationsController < ApplicationController
     @consultation = Consultation.new(consultation_params)
     @consultation.user_id = current_user.id
     @consultation.advisor_id = params[:advisor_id]
+    if @consultation.save
+      redirect_to consultations_path
+    else
+      render 'new'
+    end
   end
 
   private
 
   def consultation_params
-    params.require(:consultation).permit(:start_time, :end_time)
+    params.require(:consultation).permit(:start_time, :end_time, :description)
   end
 
 end
