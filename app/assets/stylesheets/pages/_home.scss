@@ -35,7 +35,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
-  height:900px;
 }
 
 .card {
@@ -44,6 +43,7 @@
   border-radius: 5px;
   color: white;
   position: relative;
+  height:450px
 }
 
 .card-description {
@@ -79,4 +79,8 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.form-city {
+  margin-left: 5px;
 }
