@@ -4,8 +4,8 @@ class AdvisorsController < ApplicationController
 
 
   def index
-    if params[:city].present?
-      @advisors = Advisor.where(city: params[:city])
+    if params[:city]
+      @advisors = Advisor.joins(:user).where(users: {city: params[:city]})
     else
       @advisors = Advisor.all
     end
