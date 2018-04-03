@@ -51,15 +51,16 @@
   bottom: 5px;
   left: 10px;
 }
-
-h1 {
-  text-align:center;
+.banner-content{
+  h1 {
+    text-align:center;
+  }
+  h4 {
+    opacity: 0.8;
+    font-weight: lighter;
+  }
 }
 
-h4 {
-  opacity: 0.8;
-  font-weight: lighter;
-}
 
 .card-link {
   position: absolute;
