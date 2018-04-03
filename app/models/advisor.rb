@@ -1,11 +1,14 @@
 class Advisor < ApplicationRecord
   belongs_to :user
   has_many :consultations
-  # validates :bio, presence: true
-  # validates :city, presence: true
+
+
+  def city
+    user.city
+  end
 
   def self.cities
-    Advisor.select(:city).uniq.pluck(:city).sort
+    joins(:user).map{|a| a.user.city}.uniq.reject(&:blank?).sort
   end
 
 end
