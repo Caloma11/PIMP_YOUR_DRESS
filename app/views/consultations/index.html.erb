@@ -1,0 +1,12 @@
+
+<div>
+  <h2>You have <%= @consultations.count %> consultations.</h2>
+</div>
+
+
+
+<%  if current_user.user_type == "Customer" %>
+  <div>
+    <button type="button" class="btn btn-outline-secondary"><a href="advisors/index">Find an advisor</a></button>
+  </div>
+<% end %>
