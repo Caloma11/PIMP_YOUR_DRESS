@@ -10,10 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180402180933) do
+ActiveRecord::Schema.define(version: 20180402192949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "advisors", force: :cascade do |t|
+    t.integer "rate"
+    t.string "category"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "bio"
+    t.string "city"
+    t.string "title"
+    t.index ["user_id"], name: "index_advisors_on_user_id"
+  end
+
+  create_table "consultations", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "advisor_id"
+    t.string "start_time"
+    t.string "end_time"
+    t.integer "price"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["advisor_id"], name: "index_consultations_on_advisor_id"
+    t.index ["user_id"], name: "index_consultations_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.integer "rating"
+    t.bigint "consultation_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["consultation_id"], name: "index_reviews_on_consultation_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
@@ -30,8 +64,14 @@ ActiveRecord::Schema.define(version: 20180402180933) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "bio"
+    t.string "city"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "advisors", "users"
+  add_foreign_key "consultations", "advisors"
+  add_foreign_key "consultations", "users"
+  add_foreign_key "reviews", "consultations"
 end
