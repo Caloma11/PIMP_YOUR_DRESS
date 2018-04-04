@@ -1,8 +1,8 @@
 
   <div class="advisor">
-    <div class="profile-image" style="background-image: url('<%= cl_image_path current_user.photo %>')"></div>
+    <div class="profile-image" style="background-image: url('<%= cl_image_path @advisor.user.photo %>')"></div>
     <div class="profile-details">
-      <h1><%= truncate(@advisor.title,  length: 20, omission: '')%></h1>
+      <h1><%= truncate(@advisor.title,  length: 35, omission: '')%></h1>
       <h2><%=@advisor.user.first_name%> <%=@advisor.user.last_name%></h2>
       <h3><%= @advisor.user.city %></h3>
       <p><%=@advisor.user.bio%></p>
