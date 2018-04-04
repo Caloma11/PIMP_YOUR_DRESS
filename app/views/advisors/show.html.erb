@@ -1,6 +1,6 @@
 
   <div class="advisor">
-    <div class="profile-image" style="background-image: url('http://res.cloudinary.com/dz9p1e6np/image/upload/v1522768407/photo-1485462537746-965f33f7f6a7.jpg')"></div>
+    <div class="profile-image" style="background-image: url('<%= cl_image_path current_user.photo %>')"></div>
     <div class="profile-details">
       <h1><%= truncate(@advisor.title,  length: 20, omission: '')%></h1>
       <h2><%=@advisor.user.first_name%> <%=@advisor.user.last_name%></h2>
