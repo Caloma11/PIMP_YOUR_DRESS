@@ -28,7 +28,7 @@ class AdvisorsController < ApplicationController
   def update
     current_user.build_advisor
     if current_user.update(user_params)
-      redirect_to '/'
+      redirect_to advisor_path(@advisor)
     else
       render :edit
     end
