@@ -1,16 +1,18 @@
-<%= simple_form_for current_user do |u| %>
-  <%= u.input :bio %>
-  <%= u.input :city %>
-  <%= u.simple_fields_for :advisor do |a| %>
-    <%= a.input :title %>
-    <%= a.input :rate %>
-    <%= a.input :category %>
+<div class="register">
+  <%= simple_form_for current_user do |u| %>
+    <%= u.input :bio, placeholder: "Bio", label:false,  input_html: { rows: 10 }%>
+    <%= u.input :city, placeholder: "City", label:false %>
+    <%= u.simple_fields_for :advisor do |a| %>
+      <%= a.input :title, placeholder: "Title", label:false %>
+      <%= a.input :rate, placeholder: "Rate", label:false %>
+      <%= a.input :category, placeholder: "Category", label:false %>
+    <% end %>
+
+    <div class="form-actions">
+      <%= u.button :submit, "Update", class: 'btn-success' %>    <button type="button" class="btn btn-default"><a href="">Not now</a></button>
+    </div>
+
   <% end %>
 
-  <div class="form-actions">
-    <%= u.button :submit, "Update", class: 'btn-success btn-block btn-lg' %>
-  </div>
-<% end %>
 
-<br>
-<button type="button" class="btn btn-warning"><a href="">Not now</a></button>
+</div>
