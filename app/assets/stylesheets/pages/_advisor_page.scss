@@ -1,23 +1,36 @@
 
 .advisor {
-  margin-top: 50px;
+
   box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
   background-color: rgba(255,255,255,0.9);
   display: flex;
   height: 80vh;
   padding: 30px;
+  margin:50px 10vw 0px 10vw;
 
 
   h1{
-    color: rgba(0,0,0,.6);
-    font-weight: lighter;
+    color: rgba(0,0,0,1);
     text-align: left;
+    font-size: 4vw;
+    margin-top:0px;
+    margin-bottom:0px;
+  }
+
+  h2{
+    font-size:3.5vw;
+    font-weight:lighter;
+    color: rgba(0,0,0,.7);
+    margin-top:8px;
   }
 
 
   h3{
     font-weight: lighter;
     margin-bottom: 25px;
+    font-size: 2.5vw;
+    color: rgba(0,0,0,.6);
+    margin-top:0px;
   }
 
   h4{
@@ -27,6 +40,8 @@
 
   p {
     line-height: 30px;
+    font-size: 16px;
+    font-weight:lighter;
   }
 
   .btn {
@@ -36,15 +51,29 @@
 
 }
 .profile-image {
-  background-color: yellow;
-  background-position: 0px;
+  background-position: center;
   background-size: cover;
   height: 73vh;
-  width: 30vw;
-  margin-right: 70px;
+  width: 450px;
+  margin-right: 5vw;
 }
 
 .profile-details {
   width: 35vw;
+
 }
 
+@media screen and (max-width: 850px) {
+  .advisor{
+    background-color:rgba(0,0,0,0);
+    box-shadow:none;
+    margin:0;
+  }
+  .profile-image{
+    display:none;
+  }
+
+  .profile-details{
+    width:100vw;
+  }
+}
