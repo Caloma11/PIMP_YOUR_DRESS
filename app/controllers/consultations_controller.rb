@@ -21,7 +21,7 @@ class ConsultationsController < ApplicationController
     @consultation = Consultation.new(consultation_params)
     @consultation.user_id = current_user.id
     @consultation.advisor_id = params[:advisor_id]
-    if @consultation.save
+    if @consultation.save!
       redirect_to consultations_path
     else
       render 'new'

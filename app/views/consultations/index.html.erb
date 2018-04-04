@@ -41,7 +41,7 @@
           </div>
           <div class="message-status">
             <div class="status pending"><%= simple_form_for advisor_consultations_path(consultation) do |f| %>
-              <%= f.input :status, collection: ["Pending", "Accepted", "Cancelled", "Done"] %>
+              <%= f.input :status, collection: ["Pending", "Accepted", "Cancelled", "Done"], selected: "Pending" %>
               <% end %>
             </div>
             <p class="price">€ <%= consultation.advisor.rate %>/day  </p>
