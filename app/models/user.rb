@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  mount_uploader :photo, PhotoUploader
   attr_accessor :user_type
   has_one :advisor, inverse_of: :user, dependent: :destroy
   accepts_nested_attributes_for :advisor
@@ -17,6 +18,7 @@ class User < ApplicationRecord
 
 
   after_create :create_advisor
+
 
 
 
