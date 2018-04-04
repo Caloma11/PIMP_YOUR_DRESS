@@ -1,55 +1,84 @@
 <div class="container">
-  <div class="advisor">
+  <div class="consultation">
   <div>
   <h1>Your consultations</h1>
   </div>
       <ul class="inbox">
 
-      <% @consultations.each do |consultation| %>
-
-
-
 
         <li class="message">
           <div class="message-name">
-            <h3><%= consultation.user.first_name%> <%=consultation.user.last_name %></h3>
-            <p><%= consultation.start_time %> <br>-<br> <%=  consultation.end_time%></p>
+            <h3>Better Wear</h3>
+            <p>*</p><!-- <br>-<br> --><!-- <p>*</p> -->
           </div>
           <div class="message-body">
-            <p><strong>Not sure what to dress</strong></p>
+            <p><strong>Welcome, <%= current_user.first_name %> !</strong></p>
+            <p>
+              Welcome to Better Wear! Where fashion seekers meet fashion experts. We believe in making the world a more stylish place, one person at a time.
+            </p>
+          </div>
+          <div class="message-status">
+            <p class="status accepted">Accepted</p>
+            <p class="price">$$$</p>
+          </div>
+        </li>
+
+      <% @consultations.each do |consultation| %>
+
+          <% array =  ["Hey", "Hi", "Hello", "What's up", "Hey there", "Excuse me", "Howdy there", "Pardon me", "Hola", "Greetings", "Good morning", "Good afternoon", "Good night", "G'day", "I salute you", "Sup"] %>
+
+        <% if current_user.advisor.present? %>
+        <li class="message">
+          <div class="message-name">
+            <h3><%= consultation.user.first_name%> <%=consultation.user.last_name %></h3>
+            <p><%= consultation.start_time %> - <%=  consultation.end_time%></p>
+          </div>
+          <div class="message-body">
+            <p><strong><%= array.sample %>, <%= current_user.first_name %></strong></p>
+            <p>
+              <%=  consultation.description %>
+            </p>
+          </div>
+          <div class="message-status">
+            <div class="status pending"><%= simple_form_for advisor_consultations_path(consultation) do |f| %>
+              <%= f.input :status, collection: ["Pending", "Accepted", "Cancelled", "Done"] %>
+              <% end %>
+            </div>
+            <p class="price">€ <%= consultation.advisor.rate %>/day  </p>
+          </div>
+        </li>
+
+        <% else %>
+
+           <li class="message">
+          <div class="message-name">
+            <h3><%= consultation.advisor.user.first_name%> <%=consultation.advisor.user.last_name %></h3>
+            <p><%= consultation.start_time %> - <%=  consultation.end_time%></p>
+          </div>
+          <div class="message-body">
+            <p><strong>Your message:</strong></p>
             <p>
               <%=  consultation.description %>
             </p>
           </div>
           <div class="message-status">
             <p class="status pending">Pending</p>
-            <p class="price">€345</p>
+            <p class="price">€ <%= consultation.advisor.rate %>/day </p>
           </div>
         </li>
 
         <% end %>
 
 
-        <li class="message">
-          <img src="images/gab.png" alt="" class="avatar-large">
-          <div class="message-name">
-            <h3>Hab Hegan</h3>
-            <p>10/07/17</p>
-          </div>
-          <div class="message-body">
-            <p><strong>Ain't got no style</strong></p>
-            <p>
-              Wish i could have some
-            </p>
-          </div>
-          <div class="message-status">
-            <p class="status pending">Pending</p>
-            <p class="price">€345</p>
-          </div>
-        </li>
+
+        <% end %>
 
 
-        <li class="message">
+
+
+
+
+       <!--  <li class="message">
           <img src="images/gab.png" alt="" class="avatar-large">
           <div class="message-name">
             <h3>Paul simon</h3>
@@ -123,7 +152,7 @@
             <p class="price">€560</p>
           </div>
         </li>
-
+ -->
 
     </ul>
   </div>

@@ -4,4 +4,5 @@ class Consultation < ApplicationRecord
   has_one :review
   validates :start_time, presence: true
   validates :end_time, presence: true
+  validates :status, inclusion: { in: ["Pending", "Accepted", "Cancelled", "Done"] }
 end
