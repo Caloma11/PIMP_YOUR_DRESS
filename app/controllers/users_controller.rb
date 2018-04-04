@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def update
     # current_user.build_advisor
     if current_user.update(user_params)
-      redirect_to advisors_path
+      redirect_to user_path(current_user)
     else
       render :edit
     end
