@@ -1,15 +1,16 @@
 
+<div class="register">
+  <%= simple_form_for([@advisor, @consultation]) do |f| %>
+    <%= f.error_notification %>
 
-<%= simple_form_for([@advisor, @consultation]) do |f| %>
-  <%= f.error_notification %>
+    <div class="form-inputs">
+      <%= f.input :start_time, placeholder: "Start time", label: false %>
+      <%= f.input :end_time, placeholder: "End time", label: false   %>
+      <%= f.input :description, placeholder: "Description", label: false,  input_html: { rows: 10 }  %>
+    </div>
 
-  <div class="form-inputs">
-    <%= f.input :start_time %>
-    <%= f.input :end_time %>
-    <%= f.input :description %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+</div>
