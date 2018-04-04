@@ -15,8 +15,6 @@ class AdvisorsController < ApplicationController
   end
 
   def new
-
-    current_user.build_advisor
   end
 
   def create
@@ -28,7 +26,6 @@ class AdvisorsController < ApplicationController
   end
 
   def update
-    byebug
     current_user.build_advisor
     if current_user.update(user_params)
       redirect_to '/'
