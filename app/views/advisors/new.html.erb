@@ -1,6 +1,6 @@
 <div class="register">
   <%= simple_form_for current_user do |u| %>
-    <%= u.input :bio, placeholder: "Bio", label:false %>
+    <%= u.input :bio, placeholder: "Bio", label:false,  input_html: { rows: 10 }  %>
     <%= u.input :city, placeholder: "City", label:false %>
     <%= u.simple_fields_for :advisor do |a| %>
       <%= a.input :title, placeholder: "Title", label:false%>

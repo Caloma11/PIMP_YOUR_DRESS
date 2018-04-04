@@ -1,0 +1,357 @@
+[33mcommit c47dc116f2c54f2bffaebaf997baf8b66e3f3706[m
+Author: andre rache <andrezra@gmail.com>
+Date:   Wed Apr 4 12:08:20 2018 -0300
+
+    last commit with media query
+
+[33mcommit 7245e97496bec7e12796d379aa138145d988efcd[m
+Author: andre rache <andrezra@gmail.com>
+Date:   Wed Apr 4 11:53:52 2018 -0300
+
+    added media queries on the advisor page
+
+[33mcommit c8d295054969f5b49fdb54dd3468f0659d6b22ed[m
+Merge: c1a89fb 44e9ec8
+Author: andre rache <andrezra@gmail.com>
+Date:   Wed Apr 4 11:05:02 2018 -0300
+
+    Merge branch 'master' of github.com:Caloma11/PIMP_YOUR_DRESS into reviews-2
+
+[33mcommit c1a89fbc6a422ba0d064c086631fa82c71e19d56[m
+Author: andre rache <andrezra@gmail.com>
+Date:   Wed Apr 4 11:02:50 2018 -0300
+
+    fixed the not now buttons. now they redirect to the advisors page
+
+[33mcommit 44e9ec83fc21090bf43255044c3534f27526278f[m
+Merge: 7425ef1 54154f6
+Author: Caloma11 <33554576+Caloma11@users.noreply.github.com>
+Date:   Wed Apr 4 10:58:46 2018 -0300
+
+    Merge pull request #14 from Caloma11/morningbranch
+    
+    Update user now redirects to advisors_path
+
+[33mcommit 54154f6ba9b73c6bdb7a087ebf45d896e21c4551[m
+Author: Gianluca Perrone <perronegian@hotmail.com>
+Date:   Wed Apr 4 10:53:26 2018 -0300
+
+    Update user now redirects to advisors_path
+
+[33mcommit 7425ef161374fddda335f404f52ae4761b86a78f[m
+Merge: 90ed577 baa6c5b
+Author: André Rache <andrezra@gmail.com>
+Date:   Tue Apr 3 18:36:08 2018 -0300
+
+    Merge pull request #13 from Caloma11/making-advisor-page
+    
+    Making advisor page
+
+[33mcommit baa6c5b7ed7b7bb0c8dc1681aedea708af5170c4[m
+Merge: b593963 90ed577
+Author: André Rache <andrezra@gmail.com>
+Date:   Tue Apr 3 18:35:57 2018 -0300
+
+    Merge branch 'master' into making-advisor-page
+
+[33mcommit b593963e06337e10637b3444c2c0adaf3d137f7c[m
+Author: andre rache <andrezra@gmail.com>
+Date:   Tue Apr 3 18:33:34 2018 -0300
+
+    second part of register user done
+
+[33mcommit 90ed5772dd42152cf62540af27363e1f58ee8d4e[m
+Merge: b6e824e 900d34e
+Author: Caloma11 <33554576+Caloma11@users.noreply.github.com>
+Date:   Tue Apr 3 18:22:32 2018 -0300
+
+    Merge pull request #12 from Caloma11/signups
+    
+    sign in redirects to avisors if customer, and to consultations if adv…
+
+[33mcommit 900d34e3d9439fb5eea77234e90b66944f9ec575[m
+Author: Gianluca Perrone <perronegian@hotmail.com>
+Date:   Tue Apr 3 18:21:04 2018 -0300
+
+    sign in redirects to avisors if customer, and to consultations if advisor
+
+[33mcommit efead02f108d67ed99d855f31e69a8a6cad0a998[m
+Merge: b6e4b5b b6e824e
+Author: andre rache <andrezra@gmail.com>
+Date:   Tue Apr 3 18:12:40 2018 -0300
+
+    Merge branch 'master' of github.com:Caloma11/PIMP_YOUR_DRESS into making-advisor-page
+
+[33mcommit b6e4b5b231e0d24263a8dc2ef4a52c978f84d608[m
+Author: andre rache <andrezra@gmail.com>
+Date:   Tue Apr 3 18:12:26 2018 -0300
+
+    last commit before merge
+
+[33mcommit b6e824e8584a7697ad99d0b96ab81e0776f3a686[m
+Merge: 360d750 4355665
+Author: Nicolas Saddi <saddi.nicolas@gmail.com>
+Date:   Tue Apr 3 18:09:38 2018 -0300
+
+    Merge branch 'master' of github.com:Caloma11/PIMP_YOUR_DRESS
+
+[33mcommit 360d75069f718036149311277248deb6a2d1b03a[m
+Author: Nicolas Saddi <saddi.nicolas@gmail.com>
+Date:   Tue Apr 3 18:05:16 2018 -0300
+
+    index css improved
+
+[33mcommit 435566508c78b77fda9468f14f2d9a4702942908[m
+Merge: 3d89a02 d06ae47
+Author: Caloma11 <33554576+Caloma11@users.noreply.github.com>
+Date:   Tue Apr 3 18:04:05 2018 -0300
+
+    Merge pull request #11 from Caloma11/index-view
+    
+    Advisor city bug solved with some css also
+
+[33mcommit d06ae473002c7e6d0e3207ea54d8251a87a93a0b[m
+Author: Nicolas Saddi <saddi.nicolas@gmail.com>
+Date:   Tue Apr 3 17:56:45 2018 -0300
+
+    Advisor city bug solved with some css also
+
+[33mcommit 3d89a027286341089abddcc9994d534ecdcfa997[m
+Merge: 78c6af6 4c57525
+Author: Caloma11 <33554576+Caloma11@users.noreply.github.com>
+Date:   Tue Apr 3 17:54:44 2018 -0300
+
+    Merge pull request #10 from Caloma11/signups
+    
+    Signups
+
+[33mcommit 4c57525352d65f36569f32bd686f7885ef3012f7[m
+Author: Gianluca Perrone <perronegian@hotmail.com>
+Date:   Tue Apr 3 17:53:59 2018 -0300
+
+    pushing to update
+
+[33mcommit eda00ec385dee038acf344e960599d7beaf020be[m
+Merge: 1ca5502 78c6af6
+Author: andre rache <andrezra@gmail.com>
+Date:   Tue Apr 3 17:39:25 2018 -0300
+
+    Merge branch 'master' of github.com:Caloma11/PIMP_YOUR_DRESS into making-advisor-page
+
+[33mcommit 1ca55022adae99f757e1823959cd448c50daf96a[m
+Author: andre rache <andrezra@gmail.com>
+Date:   Tue Apr 3 17:36:23 2018 -0300
+
+    last commit before merge
+
+[33mcommit 78c6af6170ff02aaae50747262be6054e8c6b5ca[m
+Merge: 8a6a335 f5c3f06
+Author: Caloma11 <33554576+Caloma11@users.noreply.github.com>
+Date:   Tue Apr 3 17:33:36 2018 -0300
+
+    Merge pull request #9 from Caloma11/index-view
+    
+    advisor city bug fixed
+
+[33mcommit f5c3f06a31bc6a140add682d9e53a2eef332d8cc[m
+Author: Nicolas Saddi <saddi.nicolas@gmail.com>
+Date:   Tue Apr 3 17:19:57 2018 -0300
+
+    advisor city bug fixed
+
+[33mcommit 8a6a335f2d9cec7e536ae0e24a4003572f96fb28[m
+Merge: 754778a 96e584e
+Author: Caloma11 <33554576+Caloma11@users.noreply.github.com>
+Date:   Tue Apr 3 16:06:46 2018 -0300
+
+    Merge pull request #8 from Caloma11/index-view
+    
+    index view
+
+[33mcommit 96e584e2bda76613994d6181b8a14625bbf3f7ed[m
+Merge: 1b1642b 754778a
+Author: Caloma11 <33554576+Caloma11@users.noreply.github.com>
+Date:   Tue Apr 3 16:06:35 2018 -0300
+
+    Merge branch 'master' into index-view
+
+[33mcommit 1b1642b6858108497278d467085bd2b0faca6a01[m
+Author: Nicolas Saddi <saddi.nicolas@gmail.com>
+Date:   Tue Apr 3 16:02:11 2018 -0300
+
+    index view
+
+[33mcommit 5710b265d437d5b039a6faeeae64fa7e5d2112f2[m
+Merge: 41f3885 754778a
+Author: Gianluca Perrone <perronegian@hotmail.com>
+Date:   Tue Apr 3 15:32:38 2018 -0300
+
+    Merge branch 'master' of github.com:Caloma11/PIMP_YOUR_DRESS into signups
+
+[33mcommit 41f3885c1cec0853d63d8cb4b93e9c1237b5c722[m
+Merge: 7335dd1 12fcd2a
+Author: Gianluca Perrone <perronegian@hotmail.com>
+Date:   Tue Apr 3 15:31:42 2018 -0300
+
+    Merge branch 'master' of github.com:Caloma11/PIMP_YOUR_DRESS into signups
+
+[33mcommit 754778a82ea959df2950c8ff88f106ab13761cdd[m
+Merge: 12fcd2a 1adbbea
+Author: Caloma11 <33554576+Caloma11@users.noreply.github.com>
+Date:   Tue Apr 3 15:31:06 2018 -0300
+
+    Merge pull request #7 from Caloma11/signups
+    
+    consultations view index done
+
+[33mcommit 1adbbea4d6ed9761f48500ab3d18dcdba83100d0[m
+Merge: 7335dd1 12fcd2a
+Author: Caloma11 <33554576+Caloma11@users.noreply.github.com>
+Date:   Tue Apr 3 15:29:55 2018 -0300
+
+    Merge branch 'master' into signups
+
+[33mcommit 7335dd1547018a25bc3b338320a91c51fdd2df30[m
+Author: Gianluca Perrone <perronegian@hotmail.com>
+Date:   Tue Apr 3 15:27:07 2018 -0300
+
+    consultations view index done
+
+[33mcommit 12fcd2a55bb278397c918b9f4e4bfc6f9b0fd3ee[m
+Merge: 301086e 19234c7
+Author: André Rache <andrezra@gmail.com>
+Date:   Tue Apr 3 14:38:04 2018 -0300
+
+    Merge pull request #6 from Caloma11/making-advisor-page
+    
+    Making advisor page
+
+[33mcommit 19234c74121e08d266be725b78c18b471d619565[m
+Author: andre rache <andrezra@gmail.com>
+Date:   Tue Apr 3 14:33:10 2018 -0300
+
+    finished the advisor page. its connected to the database. button still doesnt do anything.
+
+[33mcommit 301086e414a81e08c940242479f92a5fbba7b8a8[m
+Merge: fc6d9a9 1df8acd
+Author: Caloma11 <33554576+Caloma11@users.noreply.github.com>
+Date:   Tue Apr 3 14:20:53 2018 -0300
+
+    Merge pull request #5 from Caloma11/signups
+    
+    login now has title
+
+[33mcommit 1df8acd490f698320e547a7213f55668daaa8fa2[m
+Author: Gianluca Perrone <perronegian@hotmail.com>
+Date:   Tue Apr 3 14:19:58 2018 -0300
+
+    login now has title
+
+[33mcommit addbfb32b6f2a4d86bef8c5537c15469713a3dc7[m
+Author: andre rache <andrezra@gmail.com>
+Date:   Tue Apr 3 13:44:30 2018 -0300
+
+    Finished placeholder advisor page. now gonna replace the info with database shit
+
+[33mcommit 25bfdc48461836d84a9536a52136fc8b03e23d4e[m
+Author: andre rache <andrezra@gmail.com>
+Date:   Tue Apr 3 13:35:20 2018 -0300
+
+    advisor image is located correctly. still missing the hire button and rate
+
+[33mcommit fc6d9a906244cf648ce37808d241bd74604e04de[m
+Merge: 623c707 c90a350
+Author: Caloma11 <33554576+Caloma11@users.noreply.github.com>
+Date:   Tue Apr 3 12:54:36 2018 -0300
+
+    Merge pull request #4 from Caloma11/signups
+    
+    Logins redirecting to the right place
+
+[33mcommit c90a35038e139246d4e2245ce65c0f30ca08f4f4[m
+Author: Gianluca Perrone <perronegian@hotmail.com>
+Date:   Tue Apr 3 12:53:07 2018 -0300
+
+    Logins redirecting to the right place
+
+[33mcommit cb729544d882c2a919746d95fb81302c681a70fe[m
+Author: andre rache <andrezra@gmail.com>
+Date:   Tue Apr 3 12:36:34 2018 -0300
+
+    added cloudinary and started work on the advisor page
+
+[33mcommit 623c70735dd44cef04d9a919f02f976cd1d8343e[m
+Merge: 3a6696e 51eec73
+Author: Caloma11 <33554576+Caloma11@users.noreply.github.com>
+Date:   Tue Apr 3 11:57:54 2018 -0300
+
+    Merge pull request #3 from Caloma11/signups
+    
+    Customer and Advisor sign ups now working
+
+[33mcommit 51eec73b67567b2978b175b97fc81d916fab9b38[m
+Author: Gianluca Perrone <perronegian@hotmail.com>
+Date:   Tue Apr 3 11:56:15 2018 -0300
+
+    Customer and Advisor sign ups now working
+
+[33mcommit 3a6696e65f34a8fe5a5e4d2b79e0b36375b02885[m
+Merge: 26469ed 0d9c1c7
+Author: Caloma11 <33554576+Caloma11@users.noreply.github.com>
+Date:   Tue Apr 3 10:49:13 2018 -0300
+
+    Merge pull request #2 from Caloma11/models
+    
+    Models
+
+[33mcommit 0d9c1c7a3a871e719f22a237cad8680738c710d7[m
+Merge: fecb4aa 26469ed
+Author: Gianluca Perrone <perronegian@hotmail.com>
+Date:   Tue Apr 3 10:47:19 2018 -0300
+
+    Merge branch 'master' of github.com:Caloma11/PIMP_YOUR_DRESS into models
+
+[33mcommit 26469edc6eed67146d7191ffcdda1db73c85b531[m
+Merge: e86ae02 f23096b
+Author: Caloma11 <33554576+Caloma11@users.noreply.github.com>
+Date:   Tue Apr 3 10:29:08 2018 -0300
+
+    Merge pull request #1 from Caloma11/landing-page-and-login
+    
+    Landing page and login
+
+[33mcommit f23096b0bec865939537bbb1620bef988e6f65e8[m
+Author: andre rache <andrezra@gmail.com>
+Date:   Mon Apr 2 19:34:30 2018 -0300
+
+    almost done with login, final push of the day
+
+[33mcommit fecb4aa50a039e1ed81c659bb004ca54186f6030[m
+Author: Gianluca Perrone <perronegian@hotmail.com>
+Date:   Mon Apr 2 19:23:54 2018 -0300
+
+    update working after sign up, needs to nest advisors form and check if controllers work
+
+[33mcommit b95cb0362124f1d86cd2d9e442073cc76735a6e8[m
+Author: andre rache <andrezra@gmail.com>
+Date:   Mon Apr 2 18:37:45 2018 -0300
+
+    Finished the landing page and started the register page
+
+[33mcommit 8e0369001a663d7be7f7505125c14f009fc409c8[m
+Author: Gianluca Perrone <perronegian@hotmail.com>
+Date:   Mon Apr 2 17:53:09 2018 -0300
+
+    All controllers added, we need to test each one of them
+
+[33mcommit e86ae02a74d874d9e3307c8f05613635a7fe05dc[m
+Author: Gianluca Perrone <perronegian@hotmail.com>
+Date:   Mon Apr 2 15:47:58 2018 -0300
+
+    Devise already working
+
+[33mcommit 41e30853cfbeb483cc695367623d1dca9b191a98[m
+Author: Gianluca Perrone <perronegian@hotmail.com>
+Date:   Mon Apr 2 14:39:52 2018 -0300
+
+    Initial commit with minimal template from https://github.com/lewagon/rails-templates
