@@ -1,0 +1,14 @@
+
+<div class="user">
+    <div class="profile-image" style="background-image: url('http://res.cloudinary.com/dz9p1e6np/image/upload/v1522768407/photo-1485462537746-965f33f7f6a7.jpg')"></div>
+    <div class="user-profile-details">
+      <h2><%= current_user.first_name%> <%=current_user.last_name%></h2>
+      <h3><%= current_user.city %></h3>
+      <p><%= current_user.bio%></p>
+      <%= link_to 'edit profile', edit_user_path(current_user), class: "btn btn-success edit" %>
+    </div>
+
+  </div>
+
+
+
