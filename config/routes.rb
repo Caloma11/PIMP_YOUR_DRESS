@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   end
 
   resources :consultations, only: [:index] do
+    member do
+    post :accept
+    post :reject
+    end
     resources :reviews, only: [:new, :create]
   end
 
