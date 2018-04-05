@@ -1,29 +1,15 @@
 <div class="container">
-  <div class="consultation">
+  <div id="consultation">
   <div>
   <h1>Your consultations</h1>
+
   </div>
       <ul class="inbox">
 
 
-        <li class="message">
-          <div class="message-name">
-            <h3>Better Wear</h3>
-            <p>*</p><!-- <br>-<br> --><!-- <p>*</p> -->
-          </div>
-          <div class="message-body">
-            <p><strong>Welcome, <%= current_user.first_name %> !</strong></p>
-            <p>
-              Welcome to Better Wear! Where fashion seekers meet fashion experts. We believe in making the world a more stylish place, one person at a time.
-            </p>
-          </div>
-          <div class="message-status">
-            <p class="status accepted">Accepted</p>
-            <p class="price">$$$</p>
-          </div>
-        </li>
 
-      <% @consultations.each do |consultation| %>
+
+      <% @consultations.reverse.each do |consultation| %>
 
           <% array =  ["Hey", "Hi", "Hello", "What's up", "Hey there", "Excuse me", "Howdy there", "Pardon me", "Hola", "Greetings", "Good morning", "Good afternoon", "Good night", "G'day", "I salute you", "Sup"] %>
 
@@ -31,7 +17,7 @@
         <li class="message">
           <div class="message-name">
             <h3><%= consultation.user.first_name%> <%=consultation.user.last_name %></h3>
-            <p><%= consultation.start_time %> - <%=  consultation.end_time%></p>
+            <p><%= consultation.start_time.strftime('%b %e, %l:%M %p') %> <br> <%=  consultation.end_time.strftime('%b %e, %l:%M %p')%></p>
           </div>
           <div class="message-body">
             <p><strong><%= array.sample %>, <%= current_user.first_name %></strong></p>
@@ -39,13 +25,55 @@
               <%=  consultation.description %>
             </p>
           </div>
+
+
+
+
+
+
+
+
+
           <div class="message-status">
-            <div class="status pending"><%= simple_form_for advisor_consultations_path(consultation) do |f| %>
-              <%= f.input :status, collection: ["Pending", "Accepted", "Cancelled", "Done"], selected: "Pending" %>
+          <% if consultation.status == "Pending" %>
+            <div class="status pending">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+              <%= simple_form_for(:consultation, url: accept_consultation_path(consultation)) do |fa| %>
+              <%= fa.hidden_field :status, :value => "Pending" %>
+              <%= fa.submit "✓", class: "btn btn-sm btn-success"%>
               <% end %>
+              </li>
+
+              <li class="list-inline-item">
+               <%= simple_form_for(:consultation, url:reject_consultation_path(consultation)) do |fa| %>
+              <%= fa.hidden_field :status, :value => "Pending" %>
+              <%= fa.submit "✕", class: "btn btn-sm  btn-danger"%>
+              <% end %>
+             </li>
+              </ul>
             </div>
+
+
+            <% elsif  consultation.status == "Accepted" %>
+
+            <p class="status accepted">Accepted</p>
+
+            <% else %>
+
+            <p class="status declined">Rejected</p>
+
+          <% end %>
+
             <p class="price">€ <%= consultation.advisor.price %>/day  </p>
+
           </div>
+
+
+
+
+
+
         </li>
 
         <% else %>
@@ -62,8 +90,16 @@
             </p>
           </div>
           <div class="message-status">
+            <% if consultation.status == "Pending" %>
             <p class="status pending">Pending</p>
-            <p class="price">€ <%= consultation.advisor.price %>/day </p>
+            <% elsif  consultation.status == "Accepted" %>
+            <p class="status accepted">Accepted</p>
+            <% else %>
+            <p class="status declined">Rejected</p>
+            <% end %>
+
+
+            <p class="price">€ <%= consultation.advisor.rate %>/day </p>
           </div>
         </li>
 
@@ -73,86 +109,22 @@
 
         <% end %>
 
-
-
-
-
-
-       <!--  <li class="message">
-          <img src="images/gab.png" alt="" class="avatar-large">
+<li class="message">
           <div class="message-name">
-            <h3>Paul simon</h3>
-            <p>10/07/17</p>
+            <h3>Better Wear</h3>
+            <p>*</p><!-- <br>-<br> --><!-- <p>*</p> -->
           </div>
           <div class="message-body">
-            <p><strong>What dress to buy</strong></p>
+            <p><strong>Welcome, <%= current_user.first_name %> !</strong></p>
             <p>
-              The pink or the yellow???
-            </p>
-          </div>
-          <div class="message-status">
-            <p class="status pending">Pending</p>
-            <p class="price">€345</p>
-          </div>
-        </li>
-
-
-        <li class="message">
-          <img src="images/gab.png" alt="" class="avatar-large">
-          <div class="message-name">
-            <h3>Gene Simmons</h3>
-            <p>10/07/17</p>
-          </div>
-          <div class="message-body">
-            <p><strong>About make up</strong></p>
-            <p>
-              Is this too much??
-            </p>
-          </div>
-          <div class="message-status">
-            <p class="status pending">Pending</p>
-            <p class="price">€345</p>
-          </div>
-        </li>
-
-
-        <li class="message">
-          <img src="images/cecile.png" alt="" class="avatar-large">
-          <div class="message-name">
-            <h3>Cecile Veneziani</h3>
-            <p>23/09/17</p>
-          </div>
-          <div class="message-body">
-            <p><strong>Not sure if I'm pretty</strong></p>
-            <p>
-              Can you help me?
+              Welcome to Better Wear! Where fashion seekers meet fashion experts. We believe in making the world a more stylish place, one person at a time.
             </p>
           </div>
           <div class="message-status">
             <p class="status accepted">Accepted</p>
-            <p class="price">€345</p>
+            <p class="price">$$$</p>
           </div>
         </li>
-
-
-        <li class="message">
-          <img src="images/jad.png" alt="" class="avatar-large">
-          <div class="message-name">
-            <h3>Jad Joubran</h3>
-            <p>19/08/17</p>
-          </div>
-          <div class="message-body">
-            <p><strong>Hey man! I'm desperate...</strong></p>
-            <p>
-              Suspendisse tristique, nibh placerat blandit porttitor, dolor arcu venenatis lectus, ut egestas nisl sapien non lacus. In molestie nulla nisi. Pellentesque vestibulum tempor diam id mollis. Fusce eu bibendum mauris. Phasellus cursus venenatis sem quis aliquet. Sed ultricies nunc purus, ac sagittis nisi ultricies sit amet.
-            </p>
-          </div>
-          <div class="message-status">
-            <p class="status declined">Declined</p>
-            <p class="price">€560</p>
-          </div>
-        </li>
- -->
 
     </ul>
   </div>
