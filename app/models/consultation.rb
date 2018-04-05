@@ -1,4 +1,5 @@
 class Consultation < ApplicationRecord
+  ratyrate_rateable "rating"
   belongs_to :user
   belongs_to :advisor
   has_one :review

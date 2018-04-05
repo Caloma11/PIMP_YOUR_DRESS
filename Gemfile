@@ -10,6 +10,7 @@ gem 'redis'
 gem 'faker'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
+gem 'ratyrate'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'

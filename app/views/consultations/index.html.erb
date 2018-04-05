@@ -54,6 +54,7 @@
               </ul>
             </div>
 
+
             <% elsif  consultation.status == "Accepted" %>
 
             <p class="status accepted">Accepted</p>
@@ -64,20 +65,10 @@
 
           <% end %>
 
-            <p class="price">€ <%= consultation.advisor.rate %>/day  </p>
+
+            <p class="price">€ <%= consultation.advisor.price %>/day  </p>
+
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -109,7 +100,7 @@
             <% end %>
 
 
-            <p class="price">€ <%= consultation.advisor.rate %>/day </p>
+            <p class="price">€ <%= consultation.advisor.price %>/day </p>
           </div>
         </li>
 

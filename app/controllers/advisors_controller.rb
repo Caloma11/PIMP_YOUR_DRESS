@@ -42,7 +42,7 @@ class AdvisorsController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:bio, :city, advisor_attributes: [:rate, :category, :title])
+    params.require(:user).permit(:bio, :city, advisor_attributes: [:price, :category, :title])
   end
 
 
