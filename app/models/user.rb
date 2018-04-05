@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+
+  ratyrate_rater
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   mount_uploader :photo, PhotoUploader
@@ -18,6 +20,7 @@ class User < ApplicationRecord
 
 
   after_create :create_advisor
+
 
 
 
