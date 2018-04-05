@@ -1,6 +1,10 @@
 
 <div class="user">
+   <% if current_user.photo.present? %>
     <div class="profile-image" style="background-image: url('<%= cl_image_path current_user.photo %>')"></div>
+    <% else %>
+    <div class="profile-image" style="background-image: url('https://placeholdit.co//i/350x500?&bg=f8f8ff&fc=000000&text=You%20don%27t%20have%20a%20photo%20yet.')"></div>
+    <% end %>
     <div class="user-profile-details">
       <h2><%= current_user.first_name%> <%=current_user.last_name%></h2>
       <h3><%= current_user.city %></h3>

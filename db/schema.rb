@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20180405165304) do
     t.string "start_time"
     t.string "end_time"
     t.integer "price"
-    t.string "status"
+    t.string "status", default: "Pending"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"

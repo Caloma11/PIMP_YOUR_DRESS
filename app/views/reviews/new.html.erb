@@ -7,7 +7,7 @@
       <%= f.input :content, placeholder: "Type your review here", label: false, input_html: { rows: 10 } %>
     </div>
 
-<div> Rating  : <%= rating_for @consultation, 'rating', star_path: '/rate/' %></div>
+<div> Rating  : <%= rating_for @consultation, 'rating', star_path: true %></div>
 
 <br>
 

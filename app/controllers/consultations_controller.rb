@@ -28,6 +28,23 @@ class ConsultationsController < ApplicationController
     end
   end
 
+<<<<<<< HEAD
+=======
+  def accept
+    @consultation = Consultation.find(params[:id])
+    @consultation.status = "Accepted"
+    @consultation.save!
+    redirect_to consultations_path
+  end
+
+  def reject
+    @consultation = Consultation.find(params[:id])
+    @consultation.status = "Rejected"
+    @consultation.save!
+    redirect_to consultations_path
+
+  end
+>>>>>>> 19dd1bd017abc8bf77d932e73016170dfc42ce02
 
   private
 

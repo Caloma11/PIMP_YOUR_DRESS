@@ -1,10 +1,11 @@
-<div style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 50%),
-   url(<%= asset_url 'photo1' %>);" class="banner">
+<div style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 50%),url(<%= asset_url 'photo1.jpg' %>);" class="banner">
   <div class="container">
     <div class="banner-content text-center">
       <h1>Better Wear</h1><br>
       <p>Look your best</p><br>
+      <% if user_signed_in? == false %>
       <a class="btn btn-success btn-lg" href="users/sign_up">Join now</a>
+      <% end %>
     </div>
   </div>
 </div>
