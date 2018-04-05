@@ -4,8 +4,8 @@ class AdvisorsController < ApplicationController
 
 
   def index
-    if params[:city]
-      @advisors = Advisor.joins(:user).where(users: {city: params[:city]})
+    if params[:query].present?
+      @advisors = Advisor.global_search(params[:query])
     else
       @advisors = Advisor.all
     end
