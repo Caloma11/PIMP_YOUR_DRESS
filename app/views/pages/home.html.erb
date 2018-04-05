@@ -3,7 +3,9 @@
     <div class="banner-content text-center">
       <h1>Better Wear</h1><br>
       <p>Look your best</p><br>
+      <% if user_signed_in? == false %>
       <a class="btn btn-success btn-lg" href="users/sign_up">Join now</a>
+      <% end %>
     </div>
   </div>
 </div>
