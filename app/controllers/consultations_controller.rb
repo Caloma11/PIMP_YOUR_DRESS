@@ -28,6 +28,7 @@ class ConsultationsController < ApplicationController
     end
   end
 
+
   private
 
   def consultation_params
