@@ -1,5 +1,6 @@
 
   <div class="advisor">
+
      <% if @advisor.user.photo.present? %>
     <div class="profile-image" style="background-image: url('<%= cl_image_path @advisor.user.photo %>')"></div>
     <% else %>
@@ -11,6 +12,9 @@
       <h3><%= @advisor.user.city %></h3>
       <p><%=@advisor.user.bio%></p>
       <h4>Rate: <%= @advisor.price  %> per hour</h4>
+      <h5>Rating     &nbsp <% @advisor.average.to_i.times do %>
+            <%= image_tag "/images/star-on.png" %>
+          <% end %></h5>
 
       <%= link_to new_advisor_consultation_path(params[:id]) do %>
 
@@ -21,4 +25,19 @@
     </div>
   </div>
 
+
+<div class="review-box">
+  <% @advisor.consultations.each do |consultation| %>
+
+  <div class="review-container">
+    <% if !consultation.review.nil? %>
+      <div class="rating"><% consultation.rating_average.avg.to_i.times do %>
+        <%= image_tag "/images/star-on.png" %>
+      <% end %></div>
+      <div class="content"><h5>'<%= consultation.review.content %>'</h5></div>
+    <% end %>
+    </div>
+  <% end %>
+
+</div>
 
