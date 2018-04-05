@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 User.create(first_name:"Mario" , last_name:"Silva", email:"maria@gmail.com", password:"123456", bio:"I'm a local Rio designer with no degree but tons of experience. Ask me anything." , city:"Rio de Janeiro", remote_photo_url: 'http://res.cloudinary.com/dta0lx6co/image/upload/v1522869699/gbhd9xtafesy6e9chmj8.jpg'  )
 User.create(first_name:"Carlo" , last_name:"Vincenzo", email:"carlo@gmail.com", password:"123456", bio:"I'm a milanese designer working as a freelancer right now. I've travelled all Europe and know how to dress. Really." , city:"Recife", remote_photo_url: 'http://res.cloudinary.com/dta0lx6co/image/upload/v1522869282/dzwinnuqel82trbta2pj.jpg' )
 User.create(first_name:"Stephanie" , last_name:"Laurent", email:"stephanie@gmail.com", password:"123456", bio:"I'm a photographer, but been working with fashion since last year. I know pretty much everything about it, ask me." , city:"Sao Paolo", remote_photo_url: 'http://res.cloudinary.com/dta0lx6co/image/upload/v1522870458/mfqbfjlpnkrtpllguxyk.jpg' )
@@ -25,6 +24,4 @@ Advisor.create(price: 9, category: "Retail Manager", user_id: 5, title: "Dress l
 Advisor.create(price: 8, category: "Art Major", title: "Urban dressing at its finest.", user_id: 6 )
 Advisor.create(price: 9, category: "Desginer", user_id: 7, title: "Dress sharp now")
 Advisor.create(price: 12, category: "Clothing salesman", title: "Ask who knows", user_id: 8)
-
-
 
