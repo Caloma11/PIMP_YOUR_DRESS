@@ -44,7 +44,7 @@
               <%= f.input :status, collection: ["Pending", "Accepted", "Cancelled", "Done"], selected: "Pending" %>
               <% end %>
             </div>
-            <p class="price">€ <%= consultation.advisor.rate %>/day  </p>
+            <p class="price">€ <%= consultation.advisor.price %>/day  </p>
           </div>
         </li>
 
@@ -63,7 +63,7 @@
           </div>
           <div class="message-status">
             <p class="status pending">Pending</p>
-            <p class="price">€ <%= consultation.advisor.rate %>/day </p>
+            <p class="price">€ <%= consultation.advisor.price %>/day </p>
           </div>
         </li>
 
