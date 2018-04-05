@@ -17,7 +17,7 @@
         <li class="message">
           <div class="message-name">
             <h3><%= consultation.user.first_name%> <%=consultation.user.last_name %></h3>
-            <p><%= consultation.start_time.strftime('%b %e, %l:%M %p') %> <br> <%=  consultation.end_time.strftime('%b %e, %l:%M %p')%></p>
+            <p><%= consultation.start_time %> <br> <%=  consultation.end_time%></p>
           </div>
           <div class="message-body">
             <p><strong><%= array.sample %>, <%= current_user.first_name %></strong></p>

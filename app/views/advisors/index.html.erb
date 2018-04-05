@@ -1,6 +1,20 @@
 
 <h1 style="text-align: center;">Hire a fashion expert</h1>
 
+
+<!--___________________SEARCH BAR____________________- -->
+<%= form_tag advisors_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find an advisor"
+  %>
+<% end %>
+
+
+
+
+
 <div class="filter-by-city">
   <div class="show-all">
     <%= form_tag advisors_path, method: :get do  %>
