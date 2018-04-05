@@ -4,8 +4,8 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.input :start_time, placeholder: "Start time", label: false %>
-      <%= f.input :end_time, placeholder: "End time", label: false   %>
+      <%= f.input :start_time, input_html: { class: "datepicker"}, as: :string %>
+      <%= f.input :end_time, input_html: { class: "datepicker"}, as: :string %>
       <%= f.input :description, placeholder: "Description", label: false,  input_html: { rows: 10 }  %>
     </div>
 
