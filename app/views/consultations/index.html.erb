@@ -53,9 +53,7 @@
              </li>
               </ul>
             </div>
-<<<<<<< HEAD
-            <p class="price">€ <%= consultation.advisor.price %>/day  </p>
-=======
+
 
             <% elsif  consultation.status == "Accepted" %>
 
@@ -67,40 +65,10 @@
 
           <% end %>
 
-            <p class="price">€ <%= consultation.advisor.rate %>/day  </p>
->>>>>>> 19dd1bd017abc8bf77d932e73016170dfc42ce02
+
+            <p class="price">€ <%= consultation.advisor.price %>/day  </p>
+
           </div>
-
-
-<<<<<<< HEAD
-           <li class="message">
-          <div class="message-name">
-            <h3><%= consultation.advisor.user.first_name%> <%=consultation.advisor.user.last_name %></h3>
-            <p><%= consultation.start_time %> - <%=  consultation.end_time%></p>
-          </div>
-          <div class="message-body">
-            <p><strong>Your message:</strong></p>
-            <p>
-              <%=  consultation.description %>
-            </p>
-          </div>
-          <div class="message-status">
-            <p class="status pending">Pending</p>
-            <p class="price">€ <%= consultation.advisor.price %>/day </p>
-          </div>
-        </li>
-=======
->>>>>>> 19dd1bd017abc8bf77d932e73016170dfc42ce02
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -132,7 +100,7 @@
             <% end %>
 
 
-            <p class="price">€ <%= consultation.advisor.rate %>/day </p>
+            <p class="price">€ <%= consultation.advisor.price %>/day </p>
           </div>
         </li>
 
