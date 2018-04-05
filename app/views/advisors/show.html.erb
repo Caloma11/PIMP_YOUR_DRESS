@@ -16,9 +16,12 @@
             <%= image_tag "/images/star-on.png" %>
           <% end %></h5>
 
+      <% if current_user.advisor.present? == false  %>
+
       <%= link_to new_advisor_consultation_path(params[:id]) do %>
 
         <div class="btn btn-success btn-block btn-lg" >Hire!</div>
+      <% end %>
 
       <% end %>
 
