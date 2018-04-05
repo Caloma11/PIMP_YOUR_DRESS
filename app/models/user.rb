@@ -23,6 +23,7 @@ class User < ApplicationRecord
 
 
   def create_advisor
+    return if user_type.nil?
     if self.user_type.downcase == "advisor"
       Advisor.find_or_initialize_by(user: self).save!
     end

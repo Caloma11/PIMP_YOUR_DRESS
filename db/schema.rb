@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180405170538) do
+ActiveRecord::Schema.define(version: 20180405140205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20180405170538) do
   create_table "consultations", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "advisor_id"
+    t.string "start_time"
+    t.string "end_time"
     t.integer "price"
     t.string "status", default: "Pending"
     t.datetime "created_at", null: false
@@ -35,8 +37,6 @@ ActiveRecord::Schema.define(version: 20180405170538) do
     t.text "description"
     t.bigint "review_id"
     t.text "review"
-    t.datetime "start_time"
-    t.datetime "end_time"
     t.index ["advisor_id"], name: "index_consultations_on_advisor_id"
     t.index ["review_id"], name: "index_consultations_on_review_id"
     t.index ["user_id"], name: "index_consultations_on_user_id"
