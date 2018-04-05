@@ -12,9 +12,12 @@
       <p><%=@advisor.user.bio%></p>
       <h4>Rate: <%= @advisor.price  %> per hour</h4>
 
+      <% if current_user.advisor.present? == false  %>
+
       <%= link_to new_advisor_consultation_path(params[:id]) do %>
 
         <div class="btn btn-success btn-block btn-lg" >Hire!</div>
+      <% end %>
 
       <% end %>
 
