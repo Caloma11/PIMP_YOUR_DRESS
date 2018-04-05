@@ -22,6 +22,8 @@
 <div class="container">
   <div class="grid">
     <% @advisors.each do |advisor| %>
+    <% if advisor.user.photo.present? %>
+
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path advisor.user.photo %>');">
 
         <div class="card-description">
@@ -32,6 +34,7 @@
         <%= link_to "", advisor_path(advisor), class: "card-link" %>
         <!-- <a class="card-link" href="<%#= advisor_path(advisor) %>" ></a> -->
       </div>
+    <% end %>
     <% end %>
   </div>
 
