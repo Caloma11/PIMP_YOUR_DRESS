@@ -37,6 +37,11 @@
     <% if advisor.user.photo.present? %>
 
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path advisor.user.photo %>');">
+        <div class="score">
+          <% advisor.average.to_i.times do %>
+            <%= image_tag "/images/star-on.png" %>
+          <% end %>
+        </div>
 
         <div class="card-description">
           <h3><%= advisor.user.first_name %> <%= advisor.user.last_name %></h3>

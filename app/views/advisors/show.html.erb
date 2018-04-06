@@ -1,5 +1,6 @@
 
   <div class="advisor">
+
      <% if @advisor.user.photo.present? %>
     <div class="profile-image" style="background-image: url('<%= cl_image_path @advisor.user.photo %>')"></div>
     <% else %>
@@ -11,6 +12,9 @@
       <h3><%= @advisor.user.city %></h3>
       <p><%=@advisor.user.bio%></p>
       <h4>Rate: <%= @advisor.price  %> per hour</h4>
+      <h5>Rating     &nbsp <% @advisor.average.to_i.times do %>
+            <%= image_tag "/images/star-on.png" %>
+          <% end %></h5>
 
       <% if current_user.advisor.present? == false  %>
 
@@ -23,5 +27,31 @@
 
     </div>
   </div>
+
+
+<div class="review-box">
+  <% if @advisor.consultations.size > 1 %>
+  <h3><%= @advisor.consultations.size %> Reviews</h3>
+  <% elsif @advisor.consultations.size == 1 %>
+  <h3><%= @advisor.consultations.size %> Review</h3>
+  <% else %>
+  <% end %>
+
+  <% @advisor.consultations.each do |consultation| %>
+  <ul>
+    <li><% if !consultation.review.nil? %>
+      <% consultation.rating_average.avg.to_i.times do %>
+        <%= image_tag "/images/star-on.png" %>
+      <% end %>
+      <% end %>
+      &nbsp <i>'<%= consultation.review.content %>'</i>
+      <small><%= consultation.user.first_name %></small>
+    </li>
+  </ul>
+  <% end %>
+</div>
+
+
+
 
 

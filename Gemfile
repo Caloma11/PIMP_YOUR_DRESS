@@ -20,7 +20,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
-
+gem 'jquery-rails'
 gem 'pg_search'
 
 

@@ -6,4 +6,8 @@ class Consultation < ApplicationRecord
   validates :start_time, presence: true
   validates :end_time, presence: true
   validates :status, inclusion: { allow_blank: true, in: ["Pending", "Accepted", "Rejected"] }
+
+
+
+
 end
