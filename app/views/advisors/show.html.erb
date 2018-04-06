@@ -11,7 +11,7 @@
       <h2><%=@advisor.user.first_name%> <%=@advisor.user.last_name%></h2>
       <h3><%= @advisor.user.city %></h3>
       <p><%=@advisor.user.bio%></p>
-      <h4>Rate: <%= @advisor.price  %> R$ per hour</h4>
+      <h4>Rate: <%= @advisor.price  %> R$ per day</h4>
       <% if !@advisor.reviews.empty? %>
       <h5>Rating     &nbsp <% @advisor.average.to_i.times do %>
             <%= image_tag "/images/star-on.png" %>
