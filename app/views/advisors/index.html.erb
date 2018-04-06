@@ -1,32 +1,30 @@
 
-<h1 style="text-align: center;">Hire a fashion expert</h1>
+<h1 class="title">Hire a fashion expert</h1>
 
 
 <!--___________________SEARCH BAR____________________- -->
-<%= form_tag advisors_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find an advisor"
-  %>
-<% end %>
-
-
+<div class="search">
+  <%= form_tag advisors_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control ",
+      # style: "text-align: center;",
+      style: "height: 60px; border-radius: 20px; font-weight:lighter; font-size:24px; color:rgba(0,0,0,.5);",
+      placeholder: "Find an advisor"
+    %>
+  <% end %>
+  <% if params[:query] != "" && params[:query] %>
+  <h5>Displaying results for <%=params[:query]%></h5>
+  <% end %>
+</div>
 
 
 
 <div class="filter-by-city">
-  <div class="show-all">
-    <%= form_tag advisors_path, method: :get do  %>
-      <%= select_tag "city", options_for_select(Advisor.cities), class: "filter-form" %>
-      <%= submit_tag "filter by city", class: "btn btn-success" %>
-    <% end %>
-  </div>
   <div class="form-city">
     <%= form_tag advisors_path, method: :get do  %>
-      <%= submit_tag "show all", class: "btn btn-success" %>
+      <%= submit_tag "show all", class: "btn btn-default" %>
       <% end %>
-  </div>
   </div>
 </div>
 <br>

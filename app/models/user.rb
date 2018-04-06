@@ -21,6 +21,13 @@ class User < ApplicationRecord
 
   after_create :create_advisor
 
+  # include PgSearch
+  # pg_search_scope :search_by_name_and_city,
+  #   against: [ :first_name, :city ],
+  #   using: {
+  #     tsearch: { prefix: true } # <-- now `superman batm` will return something!
+  #   }
+
 
 
 
