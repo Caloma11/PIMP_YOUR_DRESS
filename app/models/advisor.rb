@@ -1,17 +1,18 @@
 class Advisor < ApplicationRecord
   belongs_to :user
   has_many :consultations
+  has_many :reviews, through: :consultations
 
 
-    include PgSearch
+  include PgSearch
 
-    pg_search_scope :global_search,
-      against: [ :category ],
-      associated_against: {
-        user: [ :first_name, :last_name, :city ]
-      },
-      using: {
-        tsearch: { prefix: true }
+  pg_search_scope :global_search,
+  against: [ :category ],
+  associated_against: {
+    user: [ :first_name, :last_name, :city ]
+    },
+    using: {
+      tsearch: { prefix: true }
     }
 
   # include PgSearch
@@ -24,7 +25,7 @@ class Advisor < ApplicationRecord
   end
 
   def average
-    if self.consultations != []
+    unless self.reviews.empty?
       self.consultations.map(&:rating_average).map(&:avg).inject(:+) / self.consultations.size
     end
   end
