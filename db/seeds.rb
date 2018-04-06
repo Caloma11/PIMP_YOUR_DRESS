@@ -16,12 +16,12 @@ User.create(first_name:"Caroline" , last_name:"Fully", email:"caroline@gmail.com
 User.create(first_name:"Paula", last_name:"Scacciano", email: "paula@gmail.com", password: "123456", bio: "I'm a italian fashion student, currently living in Berlin. I know everything about the underground fashion scene. Just ask me.", city: "Belo Horizonte", remote_photo_url: 'http://res.cloudinary.com/dta0lx6co/image/upload/v1522870688/uto4mwwhyxv7caidcitu.jpg')
 
 
-Advisor.create(price: 8, category: "Fashion Designer", user_id: 1, title: "Dress up spiritually")
-Advisor.create(price: 7, user_id: 2, category: "Fashion Student", title: "Dress hard.")
-Advisor.create(price: 17, category: "Designer", user_id: 3, title: "Sharply dress yourself.")
-Advisor.create(price: 12, category: "Clothes Seller", title: "Punk it up", user_id: 4)
-Advisor.create(price: 9, category: "Retail Manager", user_id: 5, title: "Dress like a local.")
-Advisor.create(price: 8, category: "Art Major", title: "Urban dressing at its finest.", user_id: 6 )
-Advisor.create(price: 9, category: "Desginer", user_id: 7, title: "Dress sharp now")
-Advisor.create(price: 12, category: "Clothing salesman", title: "Ask who knows", user_id: 8)
+Advisor.create(price: 500, category: "Fashion Designer", user_id: 1, title: "Dress up spiritually")
+Advisor.create(price: 200, user_id: 2, category: "Fashion Student", title: "Dress hard.")
+Advisor.create(price: 430, category: "Designer", user_id: 3, title: "Sharply dress yourself.")
+Advisor.create(price: 1000, category: "Clothes Seller", title: "Punk it up", user_id: 4)
+Advisor.create(price: 280, category: "Retail Manager", user_id: 5, title: "Dress like a local.")
+Advisor.create(price: 220, category: "Art Major", title: "Urban dressing at its finest.", user_id: 6 )
+Advisor.create(price: 350, category: "Desginer", user_id: 7, title: "Dress sharp now")
+Advisor.create(price: 300, category: "Clothing salesman", title: "Ask who knows", user_id: 8)
 
