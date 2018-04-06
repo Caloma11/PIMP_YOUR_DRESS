@@ -1,7 +1,7 @@
 .search {
 
 
-  margin: 10px 35vw 10px 35vw;
+  margin: 20px 35vw 20px 35vw;
 
   h2 {
     font-family: 'Raleway';
@@ -27,4 +27,13 @@
   }
 
 
+}
+
+.show-all {
+  border-radius: 50px;
+  height:50px;
+  width: 100px;
+  color:rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,0);
+  border: 1px solid rgba(0,0,0,.5);
 }
