@@ -82,7 +82,7 @@
            <li class="message">
           <div class="message-name">
             <h3><%= consultation.advisor.user.first_name%> <%=consultation.advisor.user.last_name %></h3>
-            <p><%= consultation.start_time %> - <%=  consultation.end_time%></p>
+            <p><%= consultation.start_time.to_time.strftime('%b %e, %l:%M %p') %> <br> <%=  consultation.end_time.to_time.strftime('%b %e, %l:%M %p')%></p>
           </div>
           <div class="message-body">
             <p><strong>Your message:</strong></p>
