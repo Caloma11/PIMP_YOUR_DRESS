@@ -16,9 +16,12 @@
             <%= image_tag "/images/star-on.png" %>
           <% end %></h5>
 
+      <% if current_user.advisor.present? == false  %>
+
       <%= link_to new_advisor_consultation_path(params[:id]) do %>
 
         <div class="btn btn-success btn-block btn-lg" >Hire!</div>
+      <% end %>
 
       <% end %>
 
@@ -27,17 +30,28 @@
 
 
 <div class="review-box">
-  <% @advisor.consultations.each do |consultation| %>
-
-  <div class="review-container">
-    <% if !consultation.review.nil? %>
-      <div class="rating"><% consultation.rating_average.avg.to_i.times do %>
-        <%= image_tag "/images/star-on.png" %>
-      <% end %></div>
-      <div class="content"><h5>'<%= consultation.review.content %>'</h5></div>
-    <% end %>
-    </div>
+  <% if @advisor.consultations.size > 1 %>
+  <h3><%= @advisor.consultations.size %> Reviews</h3>
+  <% elsif @advisor.consultations.size == 1 %>
+  <h3><%= @advisor.consultations.size %> Review</h3>
+  <% else %>
   <% end %>
 
+  <% @advisor.consultations.each do |consultation| %>
+  <ul>
+    <li><% if !consultation.review.nil? %>
+      <% consultation.rating_average.avg.to_i.times do %>
+        <%= image_tag "/images/star-on.png" %>
+      <% end %>
+      <% end %>
+      &nbsp <i>'<%= consultation.review.content %>'</i>
+      <small><%= consultation.user.first_name %></small>
+    </li>
+  </ul>
+  <% end %>
 </div>
+
+
+
+
 

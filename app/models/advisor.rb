@@ -8,7 +8,9 @@ class Advisor < ApplicationRecord
   end
 
   def average
-    self.consultations.map(&:rating_average).map(&:avg).inject(:+) / self.consultations.size
+    if self.consultations != []
+      self.consultations.map(&:rating_average).map(&:avg).inject(:+) / self.consultations.size
+    end
   end
 
   def self.cities
