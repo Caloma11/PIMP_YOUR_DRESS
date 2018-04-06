@@ -30,10 +30,10 @@
 
 
 <div class="review-box">
-  <% if @advisor.consultations.size > 1 %>
-  <h3><%= @advisor.consultations.size %> Reviews</h3>
-  <% elsif @advisor.consultations.size == 1 %>
-  <h3><%= @advisor.consultations.size %> Review</h3>
+  <% if @advisor.reviews.size > 1 %>
+  <h3><%= @advisor.reviews.size %> Reviews</h3>
+  <% elsif @advisor.reviews.size == 1 %>
+  <h3><%= @advisor.reviews.size %> Review</h3>
   <% else %>
   <% end %>
 
@@ -42,10 +42,11 @@
     <li><% if !consultation.review.nil? %>
       <% consultation.rating_average.avg.to_i.times do %>
         <%= image_tag "/images/star-on.png" %>
-      <% end %>
-      <% end %>
+        <% end %>
       &nbsp <i>'<%= consultation.review.content %>'</i>
-      <small><%= consultation.user.first_name %></small>
+      <small> - <%= consultation.user.first_name %></small>
+
+      <% end %>
     </li>
   </ul>
   <% end %>
